@@ -1,0 +1,569 @@
+<html>
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+           
+        <style>
+         
+
+          .logo {
+            position: fixed;
+            padding-left: 15px;
+          
+          }
+          .tab {
+  width: 100%;
+  padding-left: 50px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+.tab button {
+  background-color: inherit;
+  height:70px;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding:20px;
+  font-size: 14px;
+  transition: 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.tab button:hover{
+  border-bottom: 2px solid blue;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  height: 100%;
+  width: 100%;
+
+}
+
+#models{
+
+background-color:black;
+position: static;
+ max-width: 100%;
+ max-height: 100%;
+ display: none;
+}
+h3:hover {
+  color: red;
+}
+.page{
+position: absolute;
+    
+    margin-top:500px;
+    overflow: hidden;
+   
+  }
+    
+.slideshow-container {
+position: absolute;
+  width:100%;
+  height: 100%;
+  margin: auto;
+  padding-top: 10px;
+
+ 
+ 
+}
+.slides {
+  display: none;
+  }
+  li{
+     position: relative;
+     display: inline-block;
+    list-style: none;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  h3{
+    color: #686868;
+    font-size: 23px;
+    }
+    .close {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover{
+  color: red;
+  border-bottom: 2px solid black;
+}
+#ponuda {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+ol {
+  
+ display: block;
+ position: relative;
+ width: 40%;
+}
+.ponuda1 {
+  display: inline-block;
+ position: relative;
+}
+.ponuda2 {
+  display: inline-block;
+  position: relative;
+  bottom: 300px;
+}
+.ponuda4 {
+  display: inline-block;
+  position: relative;
+  left: 80px;
+  top:100px;
+  
+}
+.ponuda5 {
+  display: inline-block;
+  position: relative;
+  top: 200px;
+ 
+  
+}
+.ponuda6 {
+  display: inline-block;
+  position: relative;
+ bottom: 20px;
+ 
+}
+#sluzbeni {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+font-size: 16px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#koristeni {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+#finansiranje {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+.banka {
+  display: inline-block;
+  position: relative;
+  width: 100%; 
+}
+.banka1{
+  display: inline-block;
+ position: relative;
+ width: 100%;
+ 
+}
+#servis {
+
+  width: 100%;
+  height: 540px;
+ 
+}
+.service{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+ 
+}
+h4{
+  font-family: sans-serif;
+  color: #686868;
+  }
+  .service1 {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+  }
+  .service2 {
+    margin-left: 89px;
+    padding: 20px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+  }
+  .close2 {
+    position: absolute;
+    right: 25px;
+    top: 80px;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .close2:hover{
+    color: red;
+  }
+  #kontakt {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    
+    
+  }
+  .form {
+    float: right;
+    position: relative;
+    margin-right: 50px;
+    
+  }
+  
+  input[type=text],textarea{
+    display: inline-block;
+    padding: 10px;
+   width: 500px;   
+  }
+  .bb {
+    background-color: blue;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .cl {
+    margin-top: 200px;
+    margin-left: 200px;
+  }
+  
+
+ 
+ 
+
+
+
+
+
+
+
+           
+            
+            
+
+        </style>
+    </head>
+    <body>
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'home')">За нас</button>
+  
+        <button class="tablinks1" onclick="openCity(event, 'models')">Модели<i class="fa fa-caret-down"></i> </button>
+ 
+        <button class="tablinks" onclick="openCity(event, 'ponuda')">Акциска понуда</button>
+  
+        <button class="tablinks" onclick="openCity(event, 'sluzbeni')">Службени возила</button>
+  
+        <button class="tablinks" onclick="openCity(event, 'koristeni')"> Користени возила</button>
+        <button class="tablinks" onclick="openCity(event, 'hibridna')"><a style="text-decoration: none;color: black;" href="https://autofocus.mk/hybrid-mobility/">Хибриднина</a></button>
+        <button class="tablinks" onclick="openCity(event, 'finansiranje')">Финансирање</button>
+        <button class="tablinks" onclick="openCity(event, 'servis')">Сервис</button>
+        <button class="tablinks" onclick="openCity(event, 'kontakt')">Контакт</button>
+        <img class="logo" src="toyota-logo.png" style="width: 70px;margin-left: 60px;padding: 5px;position: static;">
+      </div>
+      
+      <div class="slideshow-container">
+        <div class="slides">
+          <img src="corolla hatckback.jpg" style="width: 100%;">
+        </div>
+        <div class="slides">
+          <img src="yaris.jpg"style="width: 100%;">
+        </div>
+        <div class="slides">
+          <img src="chr.jpg"style="width: 100%;">
+        </div>
+        <div class="slides">
+          <img src="rav4.jpg"style="width: 100%;">
+        </div>
+      </div>
+      <div class="page">
+        <h1 style="text-align: center;font-family: Arial, Helvetica, sans-serif;">Модели на <color style="color: red;">Toyota</color> / <color style="color: blue;">Hybrid</color></h1>
+        <span class="close">&times;</span>
+        <ul>
+         <li><h3>Aygo</h3><img src="Modeli/aygo.jpg" style="width: 280px;"></li>
+         <li><h3>Yaris</h3><img src="Modeli/yaris.jpg" style="width:280px;"><h4 style="position: absolute;margin-left: 100px;color: blue;">Hybrid</h4></li>
+         <li><h3>Corolla Hatckback</h3><img src="Modeli/corolla.jpg" style="width: 280px;"><h4 style="position:absolute;margin-left: 100px;color: blue;">Hybrid</h4></li>
+         <li><h3>Corolla Sedan</h3><img src="Modeli/corolla sedan.jpg" style="width:280px;"><h4 style="position: absolute;margin-left: 100px;color: blue;">Hybrid</h4></li>
+       </ul>
+       <ul>
+        <li><h3>Corolla Touring Sports</h3><img src="Modeli/corolla turing.jpg"style="width:280px;"><h4 style="position: absolute;margin-left: 100px;color: blue;">Hybrid</h4></li>
+        <li><h3>Camry</h3><img src="Modeli/camry.jpg" style="width:280px;"><h4 style="position: absolute;margin-left: 100px;color: blue;">Hybrid</h4></li>
+        <li><h3>Prius</h3><img src="Modeli/prius.jpg" style="width:280px;"><h4 style="position: absolute;margin-left: 100px;color: blue;">Hybrid</h4></li>
+        <li><h3>C-HR 2019</h3><img src="Modeli/CHR.jpg" style="width:280px;"><h4 style="position: absolute;margin-left: 100px;color: blue;">Hybrid</h4></li>
+      </ul>
+      <ul>
+        <li><h3>RAV4 -2019</h3><img src="Modeli/RAV4.jpg" style="width: 280px;"><h4 style="position: absolute;margin-left: 100px;color: blue;">Hybrid</h4></li>
+        <li><h3>Land Cruiser</h3><img src="Modeli/land cruiser.jpg" style="width: 280px;"></li>
+        <li><h3>Hylux</h3><img src="Modeli/hilux.jpg" style="width: 280px;"></li>
+        <li><h3>Proace</h3><img src="Modeli/proace.jpg" style="width: 280px;"></li>
+      </ul>
+      </div>
+    </div>
+      <div class="tabcontent1" id="models">
+        <h1 style="text-align: center;font-family: Arial, Helvetica, sans-serif;">Модели на <color style="color: red;">Toyota</color> / <color style="color: blue;">Hybrid</color></h1>
+        <span class="close">&times;</span>
+        <ul>
+         <li><h3>Aygo</h3><img src="Modeli/aygo.jpg" style="width: 280px;"></li>
+         <li><h3>Yaris</h3><img src="Modeli/yaris.jpg" style="width:280px;"><h4 style="position: absolute;margin-left: 100px;color: blue;">Hybrid</h4></li>
+         <li><h3>Corolla Hatckback</h3><img src="Modeli/corolla.jpg" style="width: 280px;"><h4 style="position:absolute;margin-left: 100px;color: blue;">Hybrid</h4></li>
+         <li><h3>Corolla Sedan</h3><img src="Modeli/corolla sedan.jpg" style="width:280px;"><h4 style="position: absolute;margin-left: 100px;color: blue;">Hybrid</h4></li>
+       </ul>
+       <ul style="margin-top:40px">
+        <li><h3>Corolla Touring Sports</h3><img src="Modeli/corolla turing.jpg"style="width:280px;"><h4 style="position: absolute;margin-left: 100px;color: blue;">Hybrid</h4></li>
+        <li><h3>Camry</h3><img src="Modeli/camry.jpg" style="width:280px;"><h4 style="position: absolute;margin-left: 100px;color: blue;">Hybrid</h4></li>
+        <li><h3>Prius</h3><img src="Modeli/prius.jpg" style="width:280px;"><h4 style="position: absolute;margin-left: 100px;color: blue;">Hybrid</h4></li>
+        <li><h3>C-HR 2019</h3><img src="Modeli/CHR.jpg" style="width:280px;"><h4 style="position: absolute;margin-left: 100px;color: blue;">Hybrid</h4></li>
+      </ul>
+      <ul style="margin-top: 50px;">
+        <li><h3>RAV4 -2019</h3><img src="Modeli/RAV4.jpg" style="width: 280px;"><h4 style="position: absolute;margin-left: 100px;color: blue;">Hybrid</h4></li>
+        <li><h3>Land Cruiser</h3><img src="Modeli/land cruiser.jpg" style="width: 280px;"></li>
+        <li><h3>Hylux</h3><img src="Modeli/hilux.jpg" style="width: 280px;"></li>
+        <li><h3>Proace</h3><img src="Modeli/proace.jpg" style="width: 280px;"></li>
+      </ul>
+      </div>
+       
+      <div class="tabcontent" id="ponuda">
+        <h1 style="text-align: center;">Акциска понуда</h1>
+         <div class="ponuda1">
+           <img src="yaris.jpg" style="width: 45%;">
+           <h3>Секој ден, секој пат</h3>
+          </a>
+          </div>
+           <div class="ponuda2">
+             <a href="https://www.toyota.com.mk/promocija/corolla-kako-nikogash-dosega/">
+           <img src="corolla hatckback.jpg" style="width: 45%; float: right;margin-right: 60px;">
+           <h3 style="right: 300px;position:absolute;top:220px;">Corolla како никогаш досега</h3>
+          </a>
+          <div class="ponuda3">
+            <a href="https://www.toyota.com.mk/promocija/corolla-sedan-kako-nikogash-dosega/">
+            <img src="corolla sedan.jpg" style="width: 45%;top: 330px;position:absolute;">
+            <h3 style="top: 550px;position: absolute;">Corolla sedan како никогаш досега</h3>
+          </a>
+          </div>
+          <div class="ponuda4">
+            <a href="https://www.toyota.com.mk/promocija/tvojot-nov-tron-novata-toyota-camry/">
+          <img src="camry.jpg" style="width: 50%; float: right;">
+          <h3 style="left: 600px;position:absolute;top:220px;">Твојот нов трон - новата Toyota Camry</h3>
+         </a>
+         </div>
+         <div class="ponuda5">
+          <a href="https://www.toyota.com.mk/promocija/voobicaeno-neobicen/">
+          <img src="chr.jpg" style="width: 45%;">
+          <h3 style="top: 550px;position: absolute;top: 220px;">Вообичаено необичен</h3>
+        </a>
+        </div>
+        <div class="ponuda6">
+          <a href="https://www.toyota.com.mk/promocija/prav-izbor/">
+        <img src="rav4.jpg" style="width: 45%; float: right;margin-right: 60px;">
+        <h3 style="left: 700px;position:absolute;top:220px;">ПRAV избор</h3>
+       </a>
+      </div>
+         </div>
+      </div>
+      <div class="tabcontent" id="sluzbeni">
+        <img src="procenka.jpg" style="width: 450px;">
+        <img src="staro za novo.jpg" style="width: 450px;">
+        <ul style="font-weight:bold;">
+         
+          <ol> - 1.Проверка на надворешната состојба на возилото</ol>
+          <ol>2.Проверка на моторот </ol>
+          <ol>3.Проверка на системот за управување</ol>
+          <ol>4.Проверка на трансмисиониот систем</ol>
+          <ol>5.Проверка на системот за сопирање</ol>
+          <ol>6.Проверка на подвозјето</ol>
+          <ol>7.Проверка на внатрешната состојба на возилото</ol>
+          <ol>8.Проверка на електронските системи </ol>
+          <ol>9.Проверка на аудио системот</ol>
+          <ol>10.Проверка на пневматиците</ol>
+        </ul>
+          <p>Цената на прегледот чини 1,180 денари со вклучено ДДВ и трае од 30 до 45 минути.</p>
+          <p>-2. Дефинирање на откупната вредност – врз основа на утврдената состојба на користеното возило добиена од извештајот како и пазарните параметри. Информацијата за откупната вредност се соопштува во рок од 24 часа.
+          </p>
+          
+          <p> - 3. Откуп на возило  - доколку се согласат двете страни. Во случај на договор за откуп,клиентот остварува право за враќање на средствата за преглед на возилото.
+
+            За да возилото стане предмет на откуп потребно е да се исполнат неколку услови:
+            
+            До 10 години старост
+            Да нема претрпено големи поправки
+            Да е купено во Македонија
+            Да има уредна и редовна сервисна историја
+            Да не биде заложено</p>
+
+        </ul>
+      </div>
+      <div class="tabcontent" id="koristeni">
+        <img src="koristeno.jpg" style="width: 100%;height: 350px;">
+         <h2>ФИНАНСИРАЊЕ (ЛИЗИНГ) НА КОРИСТЕНИ ВОЗИЛА:
+        </h2>
+          <ol>
+            <li>- Каматна стапка: 5,5 %</li>
+            <li>- Минимално учество за патнички возила: 20 %</li>
+            <li>- Минимално учество за комерцијални возила: 10 %+ ДДВ</li>
+            <li>- Максимален период на отплата: зависи од староста на возилото</li>
+            <li>- Задолжително каско осигурување со 500 € франшиза</li>
+          </ol>
+          <p>* Во случај кога користеното возило се продава со 3 месечна гаранција (или 5.000км, по принцип што попрво) истата се однесува само на мотор и менувач.
+            Повеќе информации на: 02 30 88 880</p>
+      </div>
+      <div class="tabcontent" id="finansiranje">
+        <h1 style="text-align: center;margin-top: 150px;">ФИНАНСИРАЊЕ</h1>
+        <ol class="banka">
+          
+         <li style="float: left;margin-left: 100px;"><a href="https://nlb.mk/Default.aspx?mid=123&lId=1"> <img src="finansiranje/nlb-banka-logo.png" style="width: 250px;"></li>
+        </a>
+          <li style="margin-left: 200px;"><a href="http://www.osiguritelnapolisa.com.mk/Avtoodgovornost.html"><img src="finansiranje/osiguritelna-polisa.png" style="width: 250px;"></a></li> 
+         <li style="float: right;margin-right: 100px;"><a href="https://www.stb.com.mk/naselenie/krediti/avtomobilski-kredit/so-zalog-na-vozilo/"> <img src="finansiranje/stopanska-banka.png" style="width: 250px;"></a></li>
+        </ol>
+        <span class="banka1">
+          <a href="https://www.ohridskabanka.mk/avtomobilski-kredit.nspx">
+          <img src="finansiranje/ohridska-banka-new.png" style="width: 250px;margin-left: 130px;">
+        </a>
+        <a href="https://www.kb.com.mk/Default.aspx?sel=2322&lang=1&uc=1&par=0">
+          <img src="finansiranje/kb.png" style="width: 250px;margin-left: 200px;">
+        </a>
+        <a href="http://www.s-leasing.mk/rubrika/10/Patnicki_vozila">
+          <img src="finansiranje/spk-leasing.png" style="width: 250px;margin-right: 100px;float: right;padding-top: 50px;">
+        </a>
+        </span>
+      </div>
+      <div class="tabcontent" id="servis">
+        <span class="close2">&times;</span>
+        <ol class="service">
+          <li>
+          <img src="servis/473-proverka-na-sostojba-na-hibridnata-baterija-1-400x252.jpg" style="width: 260px;height: 160px;">
+          <h4>Проверка на состојба на хибридната батерија</h4>
+        </li>
+        <li>
+          <img src="servis/118-nashiot-servis-400x252.jpg" style="width: 260px;height: 160px;">
+          <h4>Нашиот сервис</h4>
+        </li>
+        <li>
+          <img src="servis/119-originalni-rezervni-delovi-400x252.jpg" style="width: 260px;height: 160px;">
+          <h4>Оригинални резервни делови</h4></li>
+          <li>
+          <img  src="servis/122-vetuvanje-kon-klientite-1-400x252.jpg" style="width: 260px;height: 160px;">
+          <h4>Ветување кон клиентите</h4>
+        </li>
+      </ol>
+      <div class="service1">
+        <ol class="service2">
+          <li><img src="servis/123-garancija-1-400x252.jpg" style="width: 260px;height: 160px;"><h4>Гаранција</h4></li>
+          <li><img src="servis/125-restavracija-na-farovi-1-400x252.jpg" style="width: 260px;height: 160px;"><h4>Реставрација на фарови</h4></li>
+          <li><img src="servis/staro.jpg" style="width: 260px;height: 160px;"><h4>Програма СТАРО ЗА НОВО</h4></li>
+          <li><img src="servis/157-toyota-se-grizi-za-vas-1-400x252.jpg" style="width: 260px;height: 160px;"><h4>Toyota се грижи за вас</h4></li>
+
+        </ol>
+      </div>
+
+      </div>
+      <div class="tabcontent" id="kontakt">
+        <img class="cl" src="toyota-logo.png" style="width: 150px;">
+        <h2 style="color: rgb(224, 0, 0);margin-left:180px;font-weight: bold;">Toyota Авто Центар</h2>
+          <h4 style="margin-left: 200px;">ДООЕЛ Скопје</h4>
+          <h4 style="margin-left: 150px;">Булевар 8-ми Септември број 21</h4>
+          <h4 style="margin-left: 100px;">1000 Скопје, Република Северна Македонија</h4>
+        <form>
+         
+          
+          <ol class="form">
+            <li><input type="text" name="user" placeholder="Име" style="float: right;"></li>
+            <li><input  type="text" name="email" placeholder="Емаил" style="float: right;"></li>
+            <li><textarea style="width: 500px;height: 200px;"  placeholder="Порака" style="float: right;"></textarea></li>
+            <p style="font-family:Arial, Helvetica, sans-serif;font-size: 15px;">Заштитата на вашите лични информации е наш приоритет, за повеќе информации, внимателно прочитајте ја нашата политика за приватност.
+
+              Личните детали за оваа апликација се наменети за Тојота Авто Центар ДООЕЛ, Скопје, официјален претставник на ТОYОТА во Република Северна Македонија. Вашите податоци ќе се користат за да се направат барања, како и за статистичка анализа и истражување.
+              
+             
+   Во зависност од Вашата согласност, тие ќе бидат искористени и за да Ви се испратат информации за понуди, новости и соопштенија (билтени, покани и други публикации) од Тојота Авто Центар ДООЕЛ, Скопје.</p>
+          <input type="checkbox" name="radio">Ги прифаќам горенаведените услови.
+          <button class="bb">Испрати</button>
+        
+          <hr>
+         
+          
+
+
+         
+        </form>
+      
+      </ol>
+      <hr>
+      <ol style="font-family: Arial, Helvetica, sans-serif;">
+        <li style="margin-left: 150px;">Работно време
+        </li>
+        <li>Продажен салон:
+
+          Понеделник - Петок: 08:00 h - 18:00 h
+          Сабота: 10:00 h - 14:00 h</li>
+          <li>Сервис:
+
+            Понеделник - Петок: 08:00 h - 16:30 h
+            Сабота: 10:00 h - 14:00 h</li>
+      </ol>
+        
+
+      </div>
+     
+      
+      
+      
+      
+       
+     
+
+
+         
+    
+
+    <script>
+      $(document).ready(function(){
+  $(".tablinks1").click(function(){
+    $("#models").slideDown(1000);
+  });
+});
+      
+     
+     var span = document.getElementsByClassName("close")[0];
+     span.onclick = function() {
+  models.style.display = "none";
+}
+var span = document.getElementsByClassName("close2")[0];
+     span.onclick = function() {
+  servis.style.display = "none";
+}
+  
+
+
+    
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("slides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 3000);
+}
+      
+    </script>
+    
+    </body>
+</html>
